@@ -1,0 +1,5 @@
+streamlit 
+serpapi
+beautifulsoup4
+requests
+openai
