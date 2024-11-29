@@ -1,0 +1,22 @@
+[
+    {
+      "name": "streamlit",
+      "image": "docker.io/omairqz/lama-streamlit:stable",
+      "essential": true,
+      "portMappings": [
+        {
+          "containerPort": 8501
+        }
+      ],
+      "secrets": [
+        {
+          "valueFrom": "${aws_secretsmanager_secret.keys.arn}:OPENAI_API_KEY::",
+          "name": "OPENAI_API_KEY"
+        },
+        {
+          "valueFrom": "${aws_secretsmanager_secret.keys.arn}:secret:SERPAPI_KEY::",
+          "name": "SERPAPI_KEY"
+        }
+      ]
+    }
+  ]
