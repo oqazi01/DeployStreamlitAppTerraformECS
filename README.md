@@ -129,7 +129,7 @@ terragrunt apply
 ```bash
 cd deployments/prod/app-service
 ``` 
-7. **Destroy the Infrastructure **
+6. **Destroy the Infrastructure**
 ```bash
 terragrunt destroy
 ```
