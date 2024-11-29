@@ -30,9 +30,9 @@ container_port=8501
 alb_port=80
 secret_keys={
 
-  OPENAI_API_KEY="<secret key>"
+  OPENAI_API_KEY=getenv("OPENAI_API_KEY")
   
-  SERPAPI_KEY="<secret key>"
+  SERPAPI_KEY=getenv("SERPAPI_KEY")
   
   }
 

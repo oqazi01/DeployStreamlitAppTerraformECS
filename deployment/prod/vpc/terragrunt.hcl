@@ -20,7 +20,7 @@ EOF
 
 # Indicate the input values to use for the variables of the module.
 inputs = {
-  vpc_name = "streamlit-vpc"
+  vpc_name = "streamlit-vpc-prod"
 
   vpc_cidr= "10.0.0.0/16"
 

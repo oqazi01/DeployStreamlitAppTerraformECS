@@ -87,11 +87,14 @@ The repository follows a modular structure:
 git clone https://github.com/oqazi01/DeployStreamlitAppTerraformECS.git
 cd ~/DeployStreamlitAppTerraformECS
 ```
-## Configure Environment Variables
+## Configure Environment Variables INcluding API Keys
 ```bash
 export AWS_ACCESS_KEY_ID=<your-aws-access-key>
 export AWS_SECRET_ACCESS_KEY=<your-aws-secret-key>
 export AWS_DEFAULT_REGION=<region>
+export OPENAI_API_KEY=<secret_string>
+export SERPAPI_KEY=<secret_string>
+
 ```
 
 ## Remote State Configuration
@@ -135,7 +138,7 @@ cd deployments/prod/app-service
 terragrunt destroy
 ```
 ## Customizing Inputs
-You can pass variables to your Terraform modules via the inputs block in ```bash terragrunt.hcl ``` For example:
+You can pass variables to your Terraform modules via the inputs block in ```terragrunt.hcl ``` For example:
 ```bash
 inputs = {
 
@@ -148,12 +151,11 @@ container_port=8501
 alb_port=80
 secret_keys={
 
-  OPENAI_API_KEY="<secret key>"
+OPENAI_API_KEY=getenv("OPENAI_API_KEY")
   
-  SERPAPI_KEY="<secret key>"
+SERPAPI_KEY=getenv("SERPAPI_KEY")
   
   } 
-
 }
 
 ```
