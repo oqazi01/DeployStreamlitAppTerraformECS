@@ -1,6 +1,6 @@
-# Infrastructure Deployment Using Terragrunt
+# Infrastructure Deployment Using Terragrunt ![terragrunt](terragrunt.png)
 
-This project provides Infrastructure as Code (IaC) automation using Terraform and Terragrunt. Terragrunt simplifies managing Terraform configurations, remote states, and module dependencies.
+This project provides Infrastructure as Code (IaC) automation using Terraform ![terraform](terraform.png)  and Terragrunt. Terragrunt simplifies managing Terraform configurations, remote states, and module dependencies.
 
 # ECS Fargate Service Module
 
@@ -158,7 +158,6 @@ secret_keys={
 ```
 ## Outputs
 - application end point:
-- 
 ```bash
 http://alb_dns_name:80
 ```
