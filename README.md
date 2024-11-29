@@ -1,4 +1,5 @@
-# <img src="./terraform.png" alt="Thumbnail" width="150" height="150"> Infrastructure Deployment Using Terragrunt <img src="./terragrunt.png" alt="Thumbnail" width="150" height="150"> 
+<img src="./terraform.png" alt="Thumbnail" width="150" height="150"> <img src="./terragrunt.png" alt="Thumbnail" width="150" height="150"> 
+# Infrastructure Deployment Using Terragrunt
 
 This project provides Infrastructure as Code (IaC) automation using Terraform and Terragrunt. Terragrunt simplifies managing Terraform configurations, remote states, and module dependencies.
 
