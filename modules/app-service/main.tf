@@ -65,7 +65,66 @@ resource "aws_ecs_task_definition" "service" {
   memory                   = var.memory
   container_definitions    = file(container-definition.json)
   requires_compatibilities = ["FARGATE"]
+  execution_role_arn       = aws_iam_role.ecs_task_execution_role.arn
+  task_role_arn            = aws_iam_role.ecs_task_role.arn
 }
+
+# ---------------------------------------------------------------------------------------------------------------------
+# CREATE THE ECS Service Roles
+# 
+
+resource "aws_iam_role" "ecs_task_execution_role" {
+  name = "ecsTaskExecutionRole"
+
+  assume_role_policy = jsonencode({
+    Version = "2012-10-17",
+    Statement = [
+      {
+        Action = "sts:AssumeRole",
+        Effect = "Allow",
+        Principal = {
+          Service = "ecs-tasks.amazonaws.com"
+        }
+      }
+    ]
+  })
+}
+
+
+
+resource "aws_iam_policy_attachment" "ecs_task_execution_role_attachment" {
+  name       = "ecs-task-execution-role-attachment"
+  roles      = [aws_iam_role.ecs_task_execution_role.name]
+  policy_arn = "arn:aws:iam::aws:policy/service-role/AmazonECSTaskExecutionRolePolicy"
+}
+
+
+resource "aws_iam_policy_attachment" "ecs_task_execution_role_attachment" {
+  name       = "get-secret-attachment"
+  roles      = [aws_iam_role.ecs_task_execution_role.name]
+  policy_arn = "arn:aws:iam::aws:policy/SecretsManagerReadWrite"
+}
+
+resource "aws_iam_role" "ecs_task_role" {
+  name = "ecsTaskRole"
+
+  assume_role_policy = jsonencode({
+    Version = "2012-10-17",
+    Statement = [
+      {
+        Action = "sts:AssumeRole",
+        Effect = "Allow",
+        Principal = {
+          Service = "ecs-tasks.amazonaws.com"
+        }
+      }
+    ]
+  })
+}
+
+
+
+
 
 # ---------------------------------------------------------------------------------------------------------------------
 # CREATE A SECURITY GROUP FOR THE ECS SERVICE
