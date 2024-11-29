@@ -21,7 +21,7 @@ A Streamlit application that provides information and generates AI-powered image
 - The app fetches relevant information about the animal from the web.
 - Using OpenAI's DALL·E, it generates a stunning AI-rendered image of the animal based on the retrieved description.
 
-
+## Architecture
 ![Infra](infra2.drawio.svg)
 
 ## Prerequisites
