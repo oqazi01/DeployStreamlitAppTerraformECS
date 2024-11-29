@@ -60,9 +60,10 @@ The repository follows a modular structure:
 - terragrunt.hcl: Central configuration for remote state and shared settings
 
 ## Setup
-- git clone Project Repo [https://github.com/oqazi01/DeployStreamlitAppTerraformECS.git](https://github.com/oqazi01/DeployStreamlitAppTerraformECS.git).
+- clone repository
 ```bash
-cd your-repo
+git clone [https://github.com/oqazi01/DeployStreamlitAppTerraformECS.git](https://github.com/oqazi01/DeployStreamlitAppTerraformECS.git)
+cd ~/DeployStreamlitAppTerraformECS
 ```
 ## Configure Environment Variables
 ```bash
