@@ -8,6 +8,18 @@ This is an example of how to use Terraform to deploy an [ECS Fargate Service](ht
 [Application Load Balancer (ALB)](https://aws.amazon.com/elasticloadbalancing/application-load-balancer/) in front of 
 it. 
 
+## Native South American Animals Info App 🦙🐒
+A Streamlit application that provides information and generates AI-powered images for animals native to South America. This app leverages OpenAI's GPT and DALL·E models alongside SerpAPI to fetch detailed information and create visuals based on user input.
+
+## Features
+🔎 Search animal info: Retrieves information about South American animals using SerpAPI and web scraping.
+🎨 Generate AI images: Uses OpenAI's DALL·E to create unique images based on the animal description.
+💻 Interactive UI: Built with Streamlit for an easy-to-use and interactive experience.
+How It Works
+Enter the name of a South American animal in the text box (e.g., "Llama").
+The app fetches relevant information about the animal from the web.
+Using OpenAI's DALL·E, it generates a stunning AI-rendered image of the animal based on the retrieved description.
+
 
 ![Infra](infra2.drawio.svg)
 
