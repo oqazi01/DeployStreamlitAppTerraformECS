@@ -43,6 +43,7 @@ The repository follows a modular structure:
 │   ├── dev
 │   │   └── vpc
 |   |         └──terragrunt.hcl
+|   |
 │   │   └── app-service
 |   |         └──terragrunt.hcl 
 │   ├── prod
@@ -50,11 +51,12 @@ The repository follows a modular structure:
 |   |         └──terragrunt.hcl
 │   │   └── app-service
 |   |         └──terragrunt.hcl
+|   |
 └── terragrunt.hcl
 ```
 
-- modules/: Contains reusable Terraform modules.
-- environments/: Defines configurations specific to environments (dev prod).
+- modules: Contains reusable Terraform modules.
+- environments: Defines configurations specific to environments (dev prod).
 - terragrunt.hcl: Central configuration for remote state and shared settings
 
 ## Setup
