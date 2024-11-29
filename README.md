@@ -151,11 +151,16 @@ secret_keys={
   
   SERPAPI_KEY="<secret key>"
   
-  }
+  } 
 
 }
 
 ```
-
+## Outputs
+- application end point:
+- 
+```bash
+http://alb_dns_name:80
+```
 
 
