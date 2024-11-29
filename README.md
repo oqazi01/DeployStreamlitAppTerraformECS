@@ -50,6 +50,11 @@ A Streamlit application that provides information and generates AI-powered image
 The repository follows a modular structure:
 
 ```plaintext
+├── streamlit
+│     └── Dockerfile
+│     └── app.py
+│     └── requirements.txt
+|
 ├── modules/
 │   ├── vpc/
 │   ├── app-service/ 
@@ -70,6 +75,7 @@ The repository follows a modular structure:
 └── terragrunt.hcl
 ```
 
+- streamlit: module contantaing streamlit app
 - modules: Contains reusable Terraform modules.
 - environments: Defines configurations specific to environments (dev prod).
 - terragrunt.hcl: Central configuration for remote state and shared settings
