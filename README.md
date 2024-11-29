@@ -9,6 +9,8 @@ This is an example of how to use Terraform to deploy an [ECS Fargate Service](ht
 it. 
 
 
+![Infra](infra2.drawio.svg)
+
 ## Prerequisites
 1. **Install Terraform**:
    - Download and install Terraform from the [official Terraform website](https://www.terraform.io/downloads.html).
