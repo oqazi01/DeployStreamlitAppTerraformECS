@@ -62,7 +62,7 @@ The repository follows a modular structure:
 ## Setup
 - clone repository
 ```bash
-git clone [https://github.com/oqazi01/DeployStreamlitAppTerraformECS.git](https://github.com/oqazi01/DeployStreamlitAppTerraformECS.git)
+git clone https://github.com/oqazi01/DeployStreamlitAppTerraformECS.git
 cd ~/DeployStreamlitAppTerraformECS
 ```
 ## Configure Environment Variables
