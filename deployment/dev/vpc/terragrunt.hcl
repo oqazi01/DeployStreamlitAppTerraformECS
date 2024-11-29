@@ -4,7 +4,7 @@
 # Note the extra `/` after the protocol is required for the shorthand
 # notation.
 terraform {
-  source =  "git::git@github.com:oqazi01/DeployStreamlitAppTerraformECS.git//modules/vpc?ref=v0.0.1"
+  source =  "git::git@github.com:oqazi01/DeployStreamlitAppTerraformECS.git//modules/vpc?ref=v0.0.2"
 }
 
 # Indicate what region to deploy the resources into
